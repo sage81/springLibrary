@@ -18,6 +18,10 @@ spring:
         hibernate:
           ddl-auto: none
 
+jsf:
+    datetimeconverter-default-timezone-is-system-timezone: true
+    faces-servlet:
+        load-on-startup: 1
 
 logging:
     file: c:\temp\app.log
@@ -32,3 +36,6 @@ logging:
         org.springframework.security: warn
         org.hibernate: warn
         org.hibernate.type.descriptor.sql: warn
+
+
+
