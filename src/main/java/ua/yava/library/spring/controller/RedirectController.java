@@ -14,15 +14,10 @@ import javax.servlet.http.HttpServletResponse;
 @Log
 public class RedirectController {
 
-    @Autowired
-    private BookService bookService;
-
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public String baseUrlRedirect(HttpServletRequest request, HttpServletResponse response) {
 
-        bookService.vote(bookService.get(33), 5);
-
-        return "ok";
+        return "redirect:" + request.getRequestURL().append("index.xhtml").toString();
     }
 
 }
