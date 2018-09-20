@@ -9,7 +9,7 @@
         <servlet-name>facesServlet</servlet-name>
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>facesServlet</servlet-name>
         <url-pattern>/javax/faces/resources/*</url-pattern>
@@ -25,7 +25,10 @@
         <param-name>javax.faces.DATETIMECONVERTER_DEFAULT_TIMEZONE_IS_SYSTEM_TIMEZONE</param-name>
         <param-value>true</param-value>
     </context-param>
-    
+
+
+
+    <!--===================================================-->
     <!--<listener>-->
         <!--<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>-->
     <!--</listener>-->

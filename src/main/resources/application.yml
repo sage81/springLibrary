@@ -1,10 +1,8 @@
-management:
-    security:
-        enabled: false
+
 
 spring:
     datasource:
-        url: jdbc:mysql://localhost:3306/library
+        url: jdbc:mysql://localhost:3306/library?autoReconnect=true&useSSL=false
         username: root
         password: 123456
     jpa:
@@ -17,11 +15,8 @@ spring:
         show-sql: true
         hibernate:
           ddl-auto: none
+        open-in-view: false
 
-jsf:
-    datetimeconverter-default-timezone-is-system-timezone: true
-    faces-servlet:
-        load-on-startup: 1
 
 logging:
     file: c:\temp\app.log
@@ -30,12 +25,10 @@ logging:
 
     level:
         ROOT: error
-        org.springframework: warn
+        org.springframework: info
         javax.faces: warn
         org.omnifaces: warn
         org.springframework.security: warn
         org.hibernate: warn
         org.hibernate.type.descriptor.sql: warn
-
-
 
